@@ -1,0 +1,26 @@
+body {
+	background: url(../images/gym4.png);
+	background-size: cover;
+	z-index: -99;
+	text-align: center;
+}
+
+img {
+	height: 200px;
+	margin: 0px;
+	border-radius: 10px;
+}
+
+.panel {
+	margin: 20px;
+}
+
+.jumbotron {
+	padding: 20px;
+	margin: 0px;
+}
+
+.btn {
+	padding: 20px;
+	margin: 10px;
+}
