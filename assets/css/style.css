@@ -1,6 +1,4 @@
-body {
-	padding: 20px;
-}
+
 
 .main-section {
 	background: url(../images/gym4.png);
@@ -18,8 +16,8 @@ body {
 	height: 150px;
 }
 
-.attackBtn {
-	margin-left: 10px;
+.alert {
+	margin: 0 40px;
 }
 
 .panel {
