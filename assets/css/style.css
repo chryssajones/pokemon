@@ -1,26 +1,47 @@
 body {
+	padding: 20px;
+}
+
+.main-section {
 	background: url(../images/gym4.png);
 	background-size: cover;
-	z-index: -99;
 	text-align: center;
 }
 
-img {
+#yourPokemon, #opponentPokemon {
 	height: 200px;
 	margin: 0px;
 	border-radius: 10px;
+}
+
+#logo {
+	height: 150px;
+}
+
+.attackBtn {
+	margin-left: 10px;
 }
 
 .panel {
 	margin: 20px;
 }
 
-.jumbotron {
+
+.header {
 	padding: 20px;
 	margin: 0px;
+	background-color: #548;
+	text-align: center;
 }
 
 .btn {
 	padding: 20px;
 	margin: 10px;
 }
+
+/*Pokedex Section*/
+.pokedexImg {
+	height: 100px;
+	margin-bottom: 20px;
+}
+

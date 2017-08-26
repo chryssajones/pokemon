@@ -8,86 +8,132 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
    	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 	<script src="assets/javascript/game.js"></script>
 
 	<title>Pokemon Gym Battle</title>	
 </head>
 
 <body>
-<div class="jumbotron">
-	<!-- <img id="logo" src="assets/images/logo.png" alt="pokemon logo"> -->
-	<h1>Pokemon Gym Battle</h1>
+<div class="header">
+	<img id="logo" src="assets/images/logo.png" alt="pokemon logo">
 </div>
 
+<div class="main-section">
 <!-- bootstrap grid, header, 1 row, 1 column -->
 
-<div class="row">
-	<div class="col-md-12">
-		<div class = "panel panel-primary">
-  			<div class="panel-heading">
-    			<h3 class="panel-title">Game Instructions</h3>
- 			 </div>
- 			 <div class="panel-body">
-				<p>Choose a pokemon for your battle.  The CPU will choose your opponent. Click on one of the attack buttons to battle.</p>
-				<p>If your attack is successful, you will gain experiene points and your opponent will lose health points.  If you take a hit, you will lose health points.</p>
-				<p>If you lose all your health points, you lose.  But, if you defeat your opponent, you will win the gym badge!</p>
-		  	</div>
-		</div>
+<!-- 	<div class="alert alert-dismissible alert-info">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<h4>Game Instructions</h4>
+		<p>Choose a pokemon for your battle.  The CPU will choose your opponent. Click on one of the attack buttons to battle.</p>
+		<p>If your attack is successful, you will gain experiene points and your opponent will lose health points.  If you take a hit, you will lose health points.</p>
+		<p>If you lose all your health points, you lose.  But, if you defeat your opponent, you will win the gym badge!</p>
 	</div>
-</div>
+ -->
 
-<!--bootstrap grid, body, 2 rows, 3 columns each -->
+	<div class="row">
+		<div class="col-md-12">
+			<div class = "panel panel-primary">
+	  			<div class="panel-heading">
+	    			<h3 class="panel-title">Game Instructions</h3>
+	 			 </div>
+	 			 <div class="panel-body">
+					<p>Choose a pokemon for your battle.  The CPU will choose your opponent. Click on one of the attack buttons to battle.</p>
+					<p>If your attack is successful, you will gain experiene points and your opponent will lose health points.  If you take a hit, you will lose health points.</p>
+					<p>If you lose all your health points, you lose.  But, if you defeat your opponent, you will win the gym badge!</p>
+			  	</div>
+			</div>
+		</div>
+	</div>
 
-<div class="row">
-	<div class="col-md-4">
-		<div class="pokemon">
-			<img src="assets/images/pikachu.png">
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="row">
-			<div class="col-md-12">
-				<a href="#" class="btn btn-warning">Attack 1</a>
-			</div>
-			<div class="col-md-12">
-				<a href="#" class="btn btn-danger">Attack 2</a>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="pokemon">
-			<img src="assets/images/bulbasaur.png">
-		</div>
-	</div>
-</div>
+<!--battle arena section -->
 
-<div class="row">
-	<div class="col-md-4">
-		<div class="panel panel-success">
-			<div class="panel-heading">
-				<h3 class="panel-title">Your Pokemon</h3>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="pokemon">
+				<img id="yourPokemon" src="assets/images/pikachu.png">
 			</div>
-			<div class="panel-body">
-				Health Points: <span id="spanUserHp">100</span><br/>
-				Experience Points: <span id="spanUserXp">0</span><br/><br/>
-				Your Attack Result: <span id="spanUserAttackResult"></span><br/>
+		</div>
+		<div class="col-md-4">
+			<div class="row">
+				<div class="col-md-12 attackBtn">
+					<a href="#" class="btn btn-warning" id="attackBtn1">Attack 1</a>
+				</div>
+				<div class="col-md-12 attackBtn">
+					<a href="#" class="btn btn-danger" id="attackBtn2">Attack 2</a>
+				</div>
 			</div>
-		</div>		
-	</div>
-	<div class="col-md-4">
-	</div>
-	<div class="col-md-4">
-		<div class="panel panel-warning">
-			<div class="panel-heading">
-				<h3 class="panel-title">Your Opponent</h3>
-			</div>
-			<div class="panel-body">
-					Health Points: <span id="spanMachineHp">100</span><br/>
-					Experience Points: <span id="spanMachineXp">0</span><br/><br/>
-					Opponent's Attack Result: <span id="spanMachineAttackResult"></span><br/>
+		</div>
+		<div class="col-md-4">
+			<div class="pokemon">
+				<img id="opponentPokemon" src="assets/images/bulbasaur.png">
 			</div>
 		</div>
 	</div>
+
+	<div class="row">
+		<div class="col-md-4">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h3 class="panel-title">Your Pokemon</h3>
+				</div>
+				<div class="panel-body">
+					Health Points: <span id="spanUserHp">100</span><br/>
+					Experience Points: <span id="spanUserXp">0</span><br/><br/>
+					Your Attack Result: <span id="spanUserAttackResult"></span><br/>
+				</div>
+			</div>		
+		</div>
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-warning">
+				<div class="panel-heading">
+					<h3 class="panel-title">Opponent's Pokemon</h3>
+				</div>
+				<div class="panel-body">
+						Health Points: <span id="spanMachineHp">100</span><br/>
+						Experience Points: <span id="spanMachineXp">0</span><br/><br/>
+						Opponent's Attack Result: <span id="spanMachineAttackResult"></span><br/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- Pokeball section -->
+	<div class="row">
+		<div class="col-md-2">
+			<div class="pokedex" id="pokedex1">
+				<img class="pokedexImg" src="assets/images/pokeball.png" alt="Pokeball">	
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="pokedex" id="pokedex2">
+				<img class="pokedexImg" id="pokedex2" src="assets/images/pikachu.png" title="Click to choose Pikachu!">
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="pokedex">
+				<img class="pokedexImg" id="pokedex3" src="assets/images/squirtle.png" title="Click to choose Squirtle!">
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="pokedex">
+				<img class="pokedexImg" id="pokedex4" src="assets/images/bulbasaur.png" title="Click to choose Bulbasaur!">
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="pokedex">
+				<img class="pokedexImg" id="pokedex5" src="assets/images/charmander.png" title="Click to choose Charmander!">
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="pokedex">
+				<img class="pokedexImg" id="pokedex6" src="assets/images/jigglypuff.png" title="Click to choose Jigglypuff!">
+			</div>
+		</div>
+	</div>
+
 </div>
 
 </body>
